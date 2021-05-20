@@ -1,38 +1,701 @@
-.App {
-  text-align: center;
+/*
+Imports
+-----------
+*/
+@font-face {
+  font-family: "Hyperspace";
+  src: url("./fonts/hyperspace.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Ebrima";
+  src: url("./fonts/ebrima.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Ebrima Bold";
+  src: url("./fonts/ebrimabd.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Chivo Bold";
+  src: url("./fonts/Chivo-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Spantaran";
+  src: url("./fonts/Spantaran.ttf");
+}
+
+
+
+/*
+--------------
+FORM
+--------------
+*/ 
+
+
+.global{
+  background: url("./images/bgpattern.jpg") repeat;
+  height: 100%;
+
+}
+
+.mainTitle{
+  width: 550px;
+  margin-right: auto;
+  margin-left: auto; 
+  padding-bottom: 30px;
+}
+
+.inputForm {
+  font-family: 'Hyperspace';
+  color: black;
+}
+
+.redInputSkill {
+  font-family: 'Ebrima';
+  font-size: 0.9em;
+  color: white;
+  letter-spacing: 1px;
+  background: rgb(255, 0, 0);
+  padding: 1px 3px 1px 3px;
+  border-radius: 4px;
+  font-weight: regular;
+  margin-right: 2px;
+}
+
+
+.orangeInputSkill {
+  font-family: 'Ebrima';
+  font-size: 0.9em;
+  color: white;
+  letter-spacing: 1px;
+  background: rgb(255, 153, 0);
+  padding: 1px 3px 1px 3px;
+  border-radius: 4px;
+  font-weight: regular;
+  margin-right: 2px;
+}
+
+.blueInputSkill {
+  font-family: 'Ebrima';
+  font-size: 0.9em;
+  color: white;
+  letter-spacing: 1px;
+  background: rgb(0, 89, 255);
+  padding: 1px 3px 1px 3px;
+  border-radius: 4px;
+  font-weight: regular;
+  margin-right: 2px;
+}
+
+.purpleInputSkill {
+  font-family: 'Ebrima';
+  font-size: 0.9em;
+  color: white;
+  letter-spacing: 1px;
+  background: rgb(183, 0, 255);
+  padding: 1px 3px 1px 3px;
+  border-radius: 4px;
+  font-weight: 100;
+  margin-right: 2px;
+}
+
+/* 
+----------------
+Container
+----------------
+*/
+
+.container{
+  margin-top: 20px;
+}
+
+
+/* 
+----------------
+Card Global 
+----------------
+*/
+.card{
+ 
+  width: 450px;
+  height: 629px;
+  background-image: url("./images/baseYellow1.png");
+  background-size: 450px;
+}
+.cardGreen{
+  width: 450px;
+  height: 629px;
+  background-image: url("./images/baseGreen1.png");
+  background-size: 450px;
+}  
+
+.cardBlue{
+  width: 450px;
+  height: 629px;
+  background-image: url("./images/baseBlue1.png");
+  background-size: 450px;
+}  
+
+.cardRed{
+  width: 450px;
+  height: 629px;
+  background-image: url("./images/baseRed.png");
+  background-size: 450px;
+}  
+
+.cardBlack{
+  width: 450px;
+  height: 629px;
+  background-image: url("./images/baseBlack.png");
+  background-size: 450px;
+}  
+
+.header{
   display: flex;
+}
+
+.energy{
+  width: 100px;
+  text-align: center;
+  font-family: "Chivo Bold";
+  font-size: 3em;
+  color: white;
+  text-shadow: 0px 0px 5px #e5ff00;
+}
+
+.cardTitle{
+  font-style: oblique;
+  font-family: 'Hyperspace';
+  font-weight: bold;
+  font-size: 1.9em;
+  letter-spacing: -1px;
+  -webkit-text-stroke: 0.5px black;
+  color: white;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}
+
+
+.cardTitleLong{
+  font-style: oblique;
+  -webkit-transform:scale(1,1.7); /* Safari and Chrome */
+  -moz-transform:scale(1,1.7); /* Firefox */
+  -ms-transform:scale(1,1.7); /* IE 9 */
+  -o-transform:scale(1,1.7); /* Opera */
+  transform:scale(1,1.7); /* W3C */
+  font-family: 'Hyperspace';
+  font-weight: bold;
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  -webkit-text-stroke: 0.5px black;
+  color: white;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  margin-top: 2px;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}
+
+
+
+
+
+.leftTitle{
+   width: 90px;
+}
+
+/*
+----------------
+Card background
+----------------
+*/
+
+.cardBackground{
+  background: url('./images/backgrounds/space.jpg');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  border-radius: 10px;
+}
+
+.cardBackgroundNebula{
+  background: url('./images/backgrounds/nebula.jpg');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  border-radius: 10px;
+}
+
+.cardBackgroundRedSpace{
+  background: url('./images/backgrounds/spaceRed.jpg');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  border-radius: 10px;
+}
+
+.cardBackgroundBlackSpace{
+  background: url('./images/backgrounds/blackSpace.jpg');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  border-radius: 10px;
+}
+
+.cardBackgroundGreenSpace{
+  background: url('./images/backgrounds/greenSpace.jpg');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  border-radius: 10px;
+}
+
+
+
+/*
+----------------
+Card characters
+----------------
+*/
+
+.cardCharacter{
+  background: url('./images/characters/vegeta.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+
+.cardCharacterGoku{
+  background: url('./images/characters/goku.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+
+.cardCharacterGoku2{
+  background: url('./images/characters/goku2.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+
+.cardCharacterGoku3{
+  background: url('./images/characters/goku3.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+.cardCharacterGoku4{
+  background: url('./images/characters/goku4b.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+.cardCharacterFrieza{
+  background: url('./images/characters/frieza1.png');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  
+}
+
+.cardCharacterFrieza2{
+  background: url('./images/characters/frieza2b.png');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  
+}
+
+
+.cardCharacterCell{
+  background: url('./images/characters/cell.png');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  
+}
+
+.cardCharacterCell2{
+  background: url('./images/characters/cell2.png');
+  background-size: 450px;
+  width: 440px;
+  height: 620px;
+  
+}
+
+
+
+.cardCharacterBeerus{
+  background: url('./images/characters/beerus.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+.cardCharacterBeerus2{
+  background: url('./images/characters/beerus2.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+.cardCharacterGokuVegeta{
+  background: url('./images/characters/gokuVegeta.png');
+  background-size: 460px;
+  width: 440px;
+  height:580px;
+  
+}
+
+.cardCharacterYamcha{
+  background: url('./images/characters/yamcha1.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+.cardCharacterYamcha2{
+  background: url('./images/characters/yamcha2.png');
+  background-size: 450px;
+  width: 440px;
+  height: 600px;
+  
+}
+
+/*
+----------------
+Card effects
+----------------
+*/
+
+
+.cardEffect{
+  background: url('./images/effects/rays.png');
+  background-size: 450px;
+  width: 440px;
+  height: 619px;
+  border-radius: 10px;
+
+}
+
+.cardEffectOndas{
+  background: url('./images/effects/esquina.png');
+  background-size: 450px;
+  width: 440px;
+  height: 619px;
+  border-radius: 10px;
+
+}
+
+.cardEffectExplosion{
+  background: url('./images/effects/explosion.png');
+  background-size: 450px;
+  width: 440px;
+  height: 619px;
+  border-radius: 10px;
+
+}
+
+.cardEffectWaves{
+  background: url('./images/effects/waves.png');
+  background-size: 450px;
+  width: 440px;
+  height: 619px;
+  border-radius: 10px;
+
+}
+
+.cardEffectGreenLines{
+  background: url('./images/effects/greenLines2.png');
+  background-size: 450px;
+  width: 440px;
+  height: 619px;
+  border-radius: 10px;
+
+}
+
+
+.cardEffectRed{
+  background: url('./images/effects/explosionRoja.png');
+  background-size: 450px;
+  width: 440px;
+  height: 619px;
+  border-radius: 10px;
+}
+
+
+
+/*
+----------------
+Card Body
+----------------
+[ ] Skills 
+[ ] Power
+[ ] Character/Special Trait/Era
+
+*/
+
+.cardBody{
+  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 470px;
+  justify-content: flex-end;
+
+}
+
+/*
+----------------
+Combo Area
+----------------
+*/
+
+.comboArea{
+  height: 100%;
+  width: 100%;
+  display:flex;
+  align-items: flex-start;
+  
+}
+
+.combo{
+  margin-left: -10px;
+  width: 60px;
+  margin-top: 95px;
+  font-size: 1.4em;
+  font-family: "Chivo Bold";
   color: white;
+  transform:rotate(270deg);
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -moz-transform:rotate(270deg); /* Firefox */
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  -o-transform:rotate(270deg); /* Opera */
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.combo10k{
+  margin-left: -14px;
+  margin-top: 90px;
+  font-size: 1.4em;
+  font-family: "Chivo Bold";
+  color: white;
+  transform:rotate(270deg);
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -moz-transform:rotate(270deg); /* Firefox */
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  -o-transform:rotate(270deg); /* Opera */
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.cardSkills{
+  font-family: "Ebrima";
+  font-size: 0.82em;
+  letter-spacing: 1px;
+  background:rgba(255,255,255,0.8);
+  width: 380px;
+  margin-bottom: 12px;
+  border: 3px solid rgb(255, 187, 0);  
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.cardSkillsGreen{
+  font-family: "Ebrima";
+  font-size: 0.82em;
+  letter-spacing: 1px;
+  background:rgba(255,255,255,0.8);
+  width: 380px;
+  margin-bottom: 12px;
+  border: 3px solid rgb(7, 126, 43);  
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.cardSkillsRed{
+  font-family: "Ebrima";
+  font-size: 0.82em;
+  letter-spacing: 1px;
+  background:rgba(255,255,255,0.8);
+  width: 380px;
+  margin-bottom: 12px;
+  border: 3px solid rgba(158, 2, 2, 0.856);  
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cardSkillsBlue{
+  font-family: "Ebrima";
+  font-size: 0.82em;
+  letter-spacing: 1px;
+  background:rgba(255,255,255,0.8);
+  width: 380px;
+  margin-bottom: 12px;
+  border: 3px solid rgb(0, 31, 117);  
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cardSkillsBlack{
+  font-family: "Ebrima";
+  font-size: 0.82em;
+  letter-spacing: 1px;
+  background:rgba(255,255,255,0.8);
+  width: 380px;
+  margin-bottom: 12px;
+  border: 3px solid rgb(51, 51, 51);  
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.auto{
+  background: rgb(0, 102, 255);
+  text-shadow: 0px 0px;
+  padding: 1px 4px 1px 4px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.redSkills{
+  display:flex;
+  flex-direction: column;
+}
+
+.redSkill{
+  letter-spacing: 1px;
+  background: rgb(255, 0, 0);
+  text-shadow: 0px 0px;
+  padding: 1px 3px 1px 3px;
+  border-radius: 4px;
+  font-weight: 400;
+  margin-right: 2px;
+}
+
+.orangeSkill{
+  letter-spacing: 1px;
+  background: rgb(255, 174, 0);
+  text-shadow: 0px 0px;
+  padding: 1px 3px 1px 3px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.purpleSkill{
+  letter-spacing: 1px;
+  background: rgb(204, 0, 255);
+  text-shadow: 0px 0px;
+  padding: 1px 3px 1px 3px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.itemSkill{
+  margin-bottom: 4px;
+}
+
+/*
+------------------
+Footer
+------------------
+*/
+
+.footer{
+
+  display:flex;
+
+
+}
+
+.power{
+  color: white;
+  font-family:"Chivo Bold";
+  font-size: 2em;
+  width: 320px;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  margin-left: 75px;
+  text-align: right;
+}
+
+.highNumber{
+  font-size: 1.11em;
+  margin-right: 1px;
+}
+
+.traits{
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hyperspace";
+  color: white;
+  font-size: 0.75em; 
+  width: 100%;
+  margin-right: 54px;
+  text-align: right; 
+  
+}
+
+.character{
+
+  padding: 1px;
+  margin: 0;
+  height: 15px;
+  margin-top: 1px;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}
+
+.specialTrait{
+  padding: 0;
+  height: 15px;
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+}
+
+.era{
+  padding: 1px;
+ text-shadow: #000 0px 0px 1px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
 }
